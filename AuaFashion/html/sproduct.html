@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/logo (2).png" type="image/x-icon" />
+    <title>Aura | Clothing Website-Product</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/navbarstyle.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+</head>
+
+<body>
+    <!-- ---------THIS IS THE NAVBAR--------- -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html"><img src="../img/AuraLogo.png" alt=""></a>
+        </div>
+        <div class="menu">
+            <div class="menu-links">
+                <a href="../index.html">Home</a>
+                <a href="./shop.html">Shop</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./cart.html"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+            <form action="./login.html">
+                <button class="log-in">Log In</button>
+            </form>
+        </div>
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <!-- ------------------------------------ -->
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="../img/products/f1.jpg" width="100%" id="MainImg" alt="" />
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="../img/products/f1.jpg" width="100%" class="small-img" alt="" />
+                </div>
+                <div class="small-img-col">
+                    <img src="../img/products/f2.jpg" width="100%" class="small-img" alt="" />
+                </div>
+                <div class="small-img-col">
+                    <img src="../img/products/f3.jpg" width="100%" class="small-img" alt="" />
+                </div>
+                <div class="small-img-col">
+                    <img src="../img/products/f4.jpg" width="100%" class="small-img" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6>Home / T-Shirt</h6>
+            <h4>Men's Fashion T Shirt</h4>
+            <h2>$139.00</h2>
+            <select>
+                <option value="">Select Size</option>
+                <option value="">XL</option>
+                <option value="">XXL</option>
+                <option value="">Small</option>
+                <option value="">large</option>
+            </select>
+            <input type="number" value="1" />
+            <button class="normal pay" id="payNowBtn">Add To Cart</button>
+            <h4>Product Details</h4>
+            <span>The Gildan Ultra Cotton T-shirt is made from a substantail 6.0 oz .
+                per sq . yd . fabric constructed from 100% cotton , this classic fit
+                preshrunk jersey knit provides unmatched comfort width each wear .
+                Featuring a taped neck and shoulder , and a seamless double-needle
+                collar , and available in a range of colors , it offers it all in the
+                ultimate head-turning package.
+            </span>
+        </div>
+    </section>
+    <section></section>
+    <!-------------------------------Footer-------------------------->
+    <footer>
+        <a href="#"><img src="../img/AuraLogofooter.png" alt="logo" /></a>
+        <div class="social">
+            <!--Facebook-->
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <!--Instagram-->
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <!--Twitter-->
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>© 2023 Aura, Inc. All Rights Reserved</p>
+    </footer>
+    <!---------------------------------------------------------------->
+
+    <script>
+        var MainImg = document.getElementById("MainImg");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function () {
+            MainImg.src = smallimg[0].src;
+        };
+        smallimg[1].onclick = function () {
+            MainImg.src = smallimg[1].src;
+        };
+        smallimg[2].onclick = function () {
+            MainImg.src = smallimg[2].src;
+        };
+        smallimg[3].onclick = function () {
+            MainImg.src = smallimg[3].src;
+        };
+    </script>
+    <script lang="javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuBtn = document.querySelector(".menu-btn");
+            const menu = document.querySelector(".menu");
+
+            menuBtn.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
+    <script lang="javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const payNowBtn = document.getElementById("payNowBtn");
+            const paymentModal = document.getElementById("paymentModal");
+
+            // Function to show the payment modal
+            function showPaymentModal() {
+                paymentModal.style.display = "block";
+            }
+
+            // Event listener for the "Pay Now" button
+            payNowBtn.addEventListener("click", function () {
+                showPaymentModal();
+            });
+        });
+    </script>
+</body>
+
+</html>

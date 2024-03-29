@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.navbar {
+    height: 90px;
+    background-color: #E3E6F3;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(15, 15, 15);
+}
+
+.navbar .logo i {
+    color: #088178;
+    font-size: 22px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(15, 15, 15);
+    margin-left: 12px;
+}
+
+.logo img{
+    width: 100px;
+    height: 60px;
+}
+
+.navbar div a:hover {
+    color: #088178;
+}
+
+.navbar div a:hover,
+.navbar div a.active {
+    color: #088178;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 24px;
+    border-right: 1px solid #E3E6F3;
+    padding-inline: 24px;
+}
+
+.menu-links a {
+    font-weight: 500;
+    color: rgb(15, 15, 15);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.menu-links a:hover {
+    color: #088178;
+}
+
+.log-in {
+    font-weight: 500;
+    padding: 12px 22px;
+    background-color: transparent;
+    color: #000000;
+    border-radius: 10px;
+    border: 2px solid #088178;
+    transition: 0.2s;
+}
+
+.log-in:hover {
+    background-color: #088178;
+    color: white;
+}
+
+.menu-btn {
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 53rem) {
+    .menu {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* Styles for mobile devices */
+    .navbar {
+        /* Adjust navbar styles for mobile */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        /* Adjust menu styles for mobile */
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f8f9fa;
+        z-index: 1000;
+        padding: 20px 0;
+    }
+
+    .menu-links {
+        /* Adjust menu links styles for mobile */
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .menu-links a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .menu-btn {
+        /* Adjust menu button styles for mobile */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* Styles for tablets */
+    .navbar {
+        /* Adjust navbar styles for tablets */
+        justify-content: space-between;
+    }
+
+    .menu {
+        /* Adjust menu styles for tablets */
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-btn {
+        /* Adjust menu button styles for tablets */
+        display: none;
+    }
+
+    .menu-links {
+        /* Adjust menu links styles for tablets */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-links a {
+        margin: 0 15px;
+    }
+}

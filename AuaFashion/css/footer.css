@@ -1,0 +1,44 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer img {
+    width: 100px;
+    height: auto;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    footer img {
+        width: 80px;
+    }
+
+    footer .social a {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
