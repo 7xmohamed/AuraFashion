@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    position: relative;
+    flex: 2;
+}
+
+#main-ctn {
+    position: absolute;
+    left: 49%;
+    top: 50%;
+    max-width: 100vw;
+    content: " ";
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#main-ctn h1 {
+    visibility: hidden;
+    font-size: 80px;
+    color: #008cff;
+    text-align: center;
+    margin-bottom: 20px;
+}
